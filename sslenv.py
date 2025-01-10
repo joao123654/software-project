@@ -91,7 +91,7 @@ class SSLExampleEnv(SSLBaseEnv):
         teammates = {id: self.frame.robots_blue[id] for id in self.my_agents.keys()}
 
         #One test:
-        print(obstacles)
+        print(self.x())
 
         remove_self = lambda robots, selfId: {id: robot for id, robot in robots.items() if id != selfId}
 
