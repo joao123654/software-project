@@ -17,8 +17,8 @@ class SSLExampleEnv(SSLBaseEnv):
         field = 2   # 1: SSL Div B    2: SSL Software challenge
         super().__init__(
             field_type=field, 
-            n_robots_blue=11,
-            n_robots_yellow=11, 
+            n_robots_blue=2,
+            n_robots_yellow=2, 
             time_step=0.025,
             render_mode=render_mode)
         
@@ -89,9 +89,6 @@ class SSLExampleEnv(SSLBaseEnv):
         for i in range(0, self.n_robots_yellow):
             obstacles[i + self.n_robots_blue] = self.frame.robots_yellow[i]
         teammates = {id: self.frame.robots_blue[id] for id in self.my_agents.keys()}
-
-        #One test:
-        print(self.x())
 
         remove_self = lambda robots, selfId: {id: robot for id, robot in robots.items() if id != selfId}
 
