@@ -13,6 +13,8 @@ class ExampleAgent(BaseAgent):
         self.set_vel(target_velocity)
         self.set_angle_vel(target_angle_velocity)
 
+        #test
+
         return
 
     def post_decision(self):
